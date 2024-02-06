@@ -3,7 +3,6 @@ var router = express.Router();
 const { MongoClient } = require("mongodb");
 const dotenv = require("dotenv").config();
 const mongokey = process.env.MONGO_DB;
-// Replace the uri string with your connection string.
 const uri = mongokey;
 
 const client = new MongoClient(uri, {
@@ -29,6 +28,14 @@ client.connect((err) => {
   });
   client.close();
 });
+
+const dataToInsert = {
+  name: "John Doe",
+  age: 30,
+  email: "johndoe@example.com",
+};
+
+insertData(dataToInsert);
 
 router.get("/", function (req, res, next) {
   res.send("respond with a resource");
