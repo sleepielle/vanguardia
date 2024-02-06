@@ -1,4 +1,4 @@
-const MongoClient = require("mongodb").MongoClient;
+/*const MongoClient = require("mongodb").MongoClient;
 const uri = "mongodb://localhost:27017/vanguardia";
 
 MongoClient.connect(uri, function (err, client) {
@@ -19,3 +19,4 @@ MongoClient.connect(uri, function (err, client) {
     });
   }
 });
+*/
